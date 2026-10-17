@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fffbed">
+    <meta
+      name="description"
+      content="Take a little horizontal tour through a cozy pastel home."
+    >
+    <title>Welcome to my home ♡</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#panorama">Skip to the room tour</a>
+
+    <main>
+      <section class="tour" id="panorama" tabindex="0" aria-label="Horizontally scrolling illustrated home">
+        <div class="panorama">
+          <svg class="panorama-image" viewBox="0 0 2048 532" role="img" aria-labelledby="room-title room-description">
+            <title id="room-title">Welcome to my home</title>
+            <desc id="room-description">A panoramic pastel room assembled from the supplied illustrations, including a sunny window, sofa, pink arcade machine, vanity, and mannequin.</desc>
+            <path fill="#fffbed" d="M0 0h2048v532H0z"/>
+            <image href="assets/elements-37.png" x="-13.6" y="-15.8" width="800" height="70.325" preserveAspectRatio="xMidYMid meet"/>
+            <image href="assets/elements-37.png" x="765.9" y="-15.8" width="800" height="70.325" preserveAspectRatio="xMidYMid meet"/>
+            <image href="assets/elements-37.png" x="1545.4" y="-15.8" width="800" height="70.325" preserveAspectRatio="xMidYMid meet"/>
+            <image href="assets/36.png" x="-50.9" y="341.1" width="2150" height="115.226" preserveAspectRatio="xMidYMid meet"/>
+            <image href="assets/elements-23.png" x="131.3" y="41.7" width="299.3" height="303.4" preserveAspectRatio="xMidYMid meet"/>
+            <image href="assets/elements-22.png" x="7.5" y="11" width="95.3" height="198.1" preserveAspectRatio="xMidYMid meet"/>
+            <image href="assets/elements-29.png" x="1261" y="-15.4" width="99.5" height="158.4" preserveAspectRatio="xMidYMid meet"/>
+            <image href="assets/elements-29.png" x="1334" y="26.6" width="99.5" height="158.4" preserveAspectRatio="xMidYMid meet"/>
+            <image href="assets/elements-37.png" x="-13.6" y="-15.8" width="800" height="70.325" preserveAspectRatio="xMidYMid meet"/>
+            <image href="assets/elements-37.png" x="765.9" y="-15.8" width="800" height="70.325" preserveAspectRatio="xMidYMid meet"/>
+            <image href="assets/elements-37.png" x="1545.4" y="-15.8" width="800" height="70.325" preserveAspectRatio="xMidYMid meet"/>
+            <image href="assets/elements-24.png" x="433" y="91" width="303.8" height="134.1" preserveAspectRatio="xMidYMid meet"/>
+            <image href="assets/elements-25.png" x="266.9" y="222.3" width="112.7" height="113.8" preserveAspectRatio="xMidYMid meet"/>
+            <image href="assets/elements-28.png" x="774" y="112.4" width="151.6" height="330.3" preserveAspectRatio="xMidYMid meet"/>
+            <image href="assets/ele.png" x="436.6" y="202" width="414.4" height="305.5" preserveAspectRatio="xMidYMid meet"/>
+            <image href="assets/elements-30.png" x="1264" y="190.7" width="128.9" height="243.6" preserveAspectRatio="xMidYMid meet"/>
+            <image href="assets/elements-35.png" x="922.9" y="157.6" width="358.9" height="292.9" preserveAspectRatio="xMidYMid meet"/>
+            <image href="assets/elements-31.png" x="1395.1" y="129" width="249.4" height="337.8" preserveAspectRatio="xMidYMid meet"/>
+            <image href="assets/elements-33.png" x="1450" y="358.8" width="100.1" height="107.5" preserveAspectRatio="xMidYMid meet"/>
+            <image href="assets/elements-32.png" x="1609.3" y="97.6" width="84.3" height="125.6" preserveAspectRatio="xMidYMid meet"/>
+            <image href="assets/elements-34.png" x="1728.3" y="31.9" width="244.7" height="384" preserveAspectRatio="xMidYMid meet"/>
+            <image href="assets/elements-21.png" x="-2" y="305.4" width="477.4" height="148.7" preserveAspectRatio="xMidYMid meet"/>
+          </svg>
+          <span class="scene-anchor scene-anchor-welcome" id="welcome" aria-hidden="true"></span>
+          <span class="scene-anchor scene-anchor-living" id="living-room" aria-hidden="true"></span>
+          <span class="scene-anchor scene-anchor-play" id="playroom" aria-hidden="true"></span>
+          <span class="scene-anchor scene-anchor-vanity" id="vanity" aria-hidden="true"></span>
+        </div>
+      </section>
+    </main>
+
+    <aside class="tour-controls" aria-label="Panorama controls">
+      <span class="scroll-label"><span aria-hidden="true">←</span> Keep wandering</span>
+      <div class="progress-track" role="progressbar" aria-label="Panorama position" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <span class="progress-fill"></span>
+      </div>
+      <button class="next-button" type="button" aria-label="Scroll right to explore">→</button>
+    </aside>
+
+    <span class="scroll-hint" aria-hidden="true">SCROLL TO EXPLORE <span>→</span></span>
+  </body>
+</html>

@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap");
+
+:root {
+  color-scheme: light;
+  --ink: #4e3a3c;
+  --muted: #887779;
+  --cream: #fffbed;
+  --pink: #f4b3ce;
+  --pink-deep: #d66b99;
+  font-family: "DM Sans", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: var(--cream);
+  color: var(--ink);
+}
+
+body {
+  min-width: 320px;
+}
+
+a {
+  color: inherit;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 10;
+  top: 12px;
+  left: 12px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: white;
+  transform: translateY(-160%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.tour {
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  outline: none;
+}
+
+.tour::-webkit-scrollbar {
+  display: none;
+}
+
+.tour:focus-visible {
+  outline: 2px solid var(--pink-deep);
+  outline-offset: -3px;
+}
+
+.panorama {
+  position: relative;
+  display: flex;
+  width: max-content;
+  height: 100%;
+  align-items: flex-start;
+}
+
+.panorama-image {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: none;
+  user-select: none;
+}
+
+.scene-anchor {
+  position: absolute;
+  top: 50%;
+  width: 1px;
+  height: 1px;
+}
+
+.scene-anchor-welcome {
+  left: 11%;
+}
+
+.scene-anchor-living {
+  left: 32.5%;
+}
+
+.scene-anchor-play {
+  left: 54%;
+}
+
+.scene-anchor-vanity {
+  left: 75%;
+}
+
+.tour-controls {
+  position: fixed;
+  z-index: 4;
+  right: clamp(20px, 5vw, 76px);
+  bottom: 20px;
+  display: flex;
+  width: min(310px, calc(100vw - 40px));
+  align-items: center;
+  gap: 14px;
+  padding: 10px 12px 10px 16px;
+  border: 1px solid rgb(234 223 202 / 90%);
+  border-radius: 999px;
+  background: rgb(255 251 237 / 94%);
+  box-shadow: 0 8px 28px rgb(78 58 60 / 8%);
+  backdrop-filter: blur(12px);
+}
+
+.scroll-label {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.scroll-label span {
+  color: var(--pink-deep);
+  font-size: 14px;
+}
+
+.progress-track {
+  height: 4px;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #f0e7d9;
+}
+
+.progress-fill {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--pink-deep);
+  transition: width 120ms linear;
+}
+
+.next-button {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid #ecc5d4;
+  border-radius: 50%;
+  background: #fff2f7;
+  color: var(--pink-deep);
+  cursor: pointer;
+  font: inherit;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.next-button:hover {
+  background: #fce3ee;
+  transform: translateX(2px);
+}
+
+.next-button:focus-visible,
+.site-header a:focus-visible {
+  outline: 2px solid var(--pink-deep);
+  outline-offset: 3px;
+}
+
+.scroll-hint {
+  position: fixed;
+  z-index: 2;
+  bottom: 28px;
+  left: clamp(20px, 5vw, 76px);
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  pointer-events: none;
+}
+
+.scroll-hint span {
+  display: inline-block;
+  margin-left: 6px;
+  color: var(--pink-deep);
+  animation: drift 1.4s ease-in-out infinite alternate;
+}
+
+@keyframes drift {
+  to {
+    transform: translateX(5px);
+  }
+}
+
+@media (max-width: 650px) {
+  .panorama-image {
+    height: 100%;
+  }
+
+  .tour-controls {
+    right: 14px;
+    bottom: 14px;
+    width: min(275px, calc(100vw - 28px));
+  }
+
+  .scroll-hint {
+    bottom: 25px;
+    left: 16px;
+    font-size: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
